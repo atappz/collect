@@ -66,11 +66,12 @@ android {
     buildToolsVersion('25.0.2')
 
     defaultConfig {
-        applicationId('org.odk.collect.android')
+        applicationId('org.enumero.collect.android')
         minSdkVersion(16)
         targetSdkVersion(22)
         versionCode LEGACY_BUILD_NUMBER_OFFSET + getMasterCommitCount()
-        versionName getVersionName()
+        versionName "v1.0"
+//        getVersionName()
         testInstrumentationRunner('android.support.test.runner.AndroidJUnitRunner')
         multiDexEnabled true
     }
@@ -95,7 +96,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
         debug {
-            debuggable(true)
+            debuggable(false)
             // Allows AndroidTest JaCoCo reports to be generated
             testCoverageEnabled(true)
         }
